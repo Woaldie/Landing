@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.saludo{
+  color: rgb(14, 121, 93);
+  text-align: center;
+
+}
+
+.saludo:hover{
+  color: yellowgreen;
+  transform: scale(1.2);
+}
