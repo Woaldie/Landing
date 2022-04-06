@@ -1,0 +1,12 @@
+.contador{
+    text-align: center;
+}
+
+.contador button{
+    margin: 2vh 5vh;
+    display: inline-block;
+}
+
+.comprar{
+    text-align: center;
+}
