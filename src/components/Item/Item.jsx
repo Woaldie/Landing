@@ -1,15 +1,39 @@
-const Item = ({prod}) => {
-    return(
-        <div className="Item">
-            <div className="Item-ID">ID: {prod.id} </div>
-            <div className="Item-info">
-                <div className="Item-title">Name: {prod.name} </div>
-                <div className="Item-price">Price: {prod.price} </div>
-                <div className="Item-stockl">Stock: {prod.stock} </div>
-                <div className="Item-description">Description: {prod.description} </div>
-            </div>
-        </div>
-    );
-};
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import s from './Item.module.css';
 
-export default Item;
+export default function Item({prod}) {
+  return (
+    <Card sx={{ maxWidth: 345 }} className={s.cardContent}>
+        <CardMedia
+        component="img"
+        height="140"
+        image="{prod.image}"
+        alt="producto"
+      />
+      
+      <CardContent >
+        <Typography gutterBottom variant="h5" component="div">
+        {prod.name}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          ${prod.price} 
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {prod.description}
+          </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {prod.stock} 
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Comprar</Button>
+      </CardActions>
+    </Card>
+  );
+}
