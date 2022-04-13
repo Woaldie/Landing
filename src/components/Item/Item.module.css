@@ -1,5 +1,11 @@
 .cardContent{
     display: inline-block;
     margin: 5vh;
-    width: 20%;
+    width: 90vh;
+    height: 90vh;
+    text-align: center;
+}
+
+.btn{
+    text-align: center;
 }

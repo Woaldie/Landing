@@ -1,38 +1,31 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import s from './Item.module.css';
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import s from "./Item.module.css";
 
-export default function Item({prod}) {
+export default function Item({ prod }) {
   return (
     <Card sx={{ maxWidth: 345 }} className={s.cardContent}>
-        <CardMedia
-        component="img"
-        height="140"
-        image="{prod.image}"
-        alt="producto"
-      />
-      
-      <CardContent >
+      <CardContent>
+        <img src={prod.image} alt={prod.name} />
         <Typography gutterBottom variant="h5" component="div">
-        {prod.name}
+          {prod.name}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          ${prod.price} 
+          ${prod.price}
         </Typography>
         <Typography variant="body2" color="text.secondary">
           {prod.description}
-          </Typography>
+        </Typography>
         <Typography variant="body2" color="text.secondary">
-          {prod.stock} 
+          {prod.stock}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Comprar</Button>
+        <Button size="small" className={s.btn} >Ver detalle</Button>
       </CardActions>
     </Card>
   );
