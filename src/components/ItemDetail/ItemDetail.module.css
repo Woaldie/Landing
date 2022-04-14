@@ -1,5 +1,4 @@
 .containerDetail{
-    display: flex;
     justify-content: space-between;
     max-width: 50%;
     margin: 2vh 5vh;
@@ -7,5 +6,6 @@
 
 .image{
     width: 40vh;
-    height: 60v
+    height: 60vh;
+    text-align: center;
 }
