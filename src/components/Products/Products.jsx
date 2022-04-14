@@ -201,14 +201,7 @@ export const Products = [
   },
 ];
 
-export const product = {
-  id: 1,
-  name: "Flour - Fast / Rapid",
-  description: "Pancreas injury NOS-open",
-  price: 86.55,
-  image: "https://placekitten.com/g/200/300",
-  stock: 1,
-};
+
 
 export const PromiseProducts = new Promise((resolve, reject) => {
   let condition = true;
@@ -221,10 +214,3 @@ export const PromiseProducts = new Promise((resolve, reject) => {
   }
 });
 
-export const promiseProduct = ()=>{
-  return new Promise((resolve, reject) =>{
-    setTimeout(() => {
-      resolve(product);
-    }, 2000);
-});
-};

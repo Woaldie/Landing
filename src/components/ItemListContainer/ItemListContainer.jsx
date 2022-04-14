@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { PromiseProducts } from "../Products/Products";
+import React, { useEffect, useState } from "react";
+import  {PromiseProducts}  from "../Products/Products";
 import ItemList from "../ItemList/ItemList";
 
 export default function ItemListContainer() {

@@ -1,24 +1,21 @@
 import React, { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import { promiseProduct } from "../Products/Products";
+import { PromiseProducts} from "../Products/Products";
 
-const ItemDetailContainer = () => {
+function ItemDetailContainer() {
+  const [product, setItem] = useState([]);
 
-    const[product, setProduct] = useState({});
+  useEffect(() => {
+    PromiseProducts
+        .then(res => setItem(res.find(p => p.id === 1)))
+        .catch(error => console.log(error));
+  },[])
 
-    useEffect(() => {
-         promiseProduct().then((res) => {
-            setProduct(res);
-         });
-    }, []);
-
-    //console.log(product);
-
-    return (
-        <>
-            <ItemDetail product = {product} />
-        </>
-    )
+  return (
+    <>
+      <ItemDetail {...product} />
+    </>
+  );
 }
 
 export default ItemDetailContainer;

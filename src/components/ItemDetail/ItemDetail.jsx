@@ -1,16 +1,15 @@
 import React from "react";
 import s from './ItemDetail.module.css'
 
-const ItemDetail = ({product}) => {
+export default function ItemDetail({image, name, price, id}){
     return (
-        <div className={s.containerDetail}>
-          <img src={product.image} alt={product.name} className = {s.image} />
+        <div className={s.containerDetail} key={id}>
+          <img src={image} alt={name} className = {s.image} />
           <div>
-            <h2>{product.name}</h2>
-            <h3>${product.price}</h3>
+            <h2>{name}</h2>
+            <h3>${price}</h3>
           </div>
         </div>
         
     )
 }
-export default ItemDetail;
