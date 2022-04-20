@@ -6,6 +6,7 @@ export const Products = [
     price: 86.55,
     image: "https://placekitten.com/g/200/300",
     stock: 1,
+    category:1,
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const Products = [
     price: 378.35,
     image: "https://placekitten.com/g/200/300",
     stock: 2,
+    category:1,
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export const Products = [
     price: 102.28,
     image: "https://placekitten.com/g/200/300",
     stock: 3,
+    category:1,
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ export const Products = [
     price: 133.1,
     image: "https://placekitten.com/g/200/300",
     stock: 4,
+    category:1,
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ export const Products = [
     price: 238.34,
     image: "https://placekitten.com/g/200/300",
     stock: 5,
+    category:1,
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ export const Products = [
     price: 371.45,
     image: "https://placekitten.com/g/200/300",
     stock: 6,
+    category: 2,
   },
   {
     id: 7,
@@ -54,6 +60,7 @@ export const Products = [
     price: 367.46,
     image: "https://placekitten.com/g/200/300",
     stock: 7,
+    category: 2,
   },
   {
     id: 8,
@@ -62,6 +69,7 @@ export const Products = [
     price: 312.55,
     image: "https://placekitten.com/g/200/300",
     stock: 8,
+    category: 2,
   },
   {
     id: 9,
@@ -70,6 +78,7 @@ export const Products = [
     price: 377.53,
     image: "https://placekitten.com/g/200/300",
     stock: 9,
+    category: 2,
   },
   {
     id: 10,
@@ -78,6 +87,7 @@ export const Products = [
     price: 301.22,
     image: "https://placekitten.com/g/200/300",
     stock: 10,
+    category: 2,
   },
   {
     id: 11,
@@ -86,6 +96,7 @@ export const Products = [
     price: 386.64,
     image: "https://placekitten.com/g/200/300",
     stock: 11,
+    category:3,
   },
   {
     id: 12,
@@ -94,6 +105,7 @@ export const Products = [
     price: 336.77,
     image: "https://placekitten.com/g/200/300",
     stock: 12,
+    category:3,
   },
   {
     id: 13,
@@ -102,6 +114,7 @@ export const Products = [
     price: 118.26,
     image: "https://placekitten.com/g/200/300",
     stock: 13,
+    category:3,
   },
   {
     id: 14,
@@ -110,6 +123,7 @@ export const Products = [
     price: 378.72,
     image: "https://placekitten.com/g/200/300",
     stock: 14,
+    category:3,
   },
   {
     id: 15,
@@ -118,6 +132,7 @@ export const Products = [
     price: 147.43,
     image: "https://placekitten.com/g/200/300",
     stock: 15,
+    category:3,
   },
   {
     id: 16,
@@ -126,6 +141,7 @@ export const Products = [
     price: 362.18,
     image: "https://placekitten.com/g/200/300",
     stock: 16,
+    category:4,
   },
   {
     id: 17,
@@ -134,6 +150,7 @@ export const Products = [
     price: 285.81,
     image: "https://placekitten.com/g/200/300",
     stock: 17,
+    category:4,
   },
   {
     id: 18,
@@ -142,6 +159,7 @@ export const Products = [
     price: 106.64,
     image: "https://placekitten.com/g/200/300",
     stock: 18,
+    category:4,
   },
   {
     id: 19,
@@ -150,6 +168,7 @@ export const Products = [
     price: 322.42,
     image: "https://placekitten.com/g/200/300",
     stock: 19,
+    category:4,
   },
   {
     id: 20,
@@ -158,6 +177,7 @@ export const Products = [
     price: 198.83,
     image: "https://placekitten.com/g/200/300",
     stock: 20,
+    category:4,
   },
   {
     id: 21,
@@ -166,6 +186,7 @@ export const Products = [
     price: 192.45,
     image: "https://placekitten.com/g/200/300",
     stock: 21,
+    category:5,
   },
   {
     id: 22,
@@ -174,6 +195,7 @@ export const Products = [
     price: 199.46,
     image: "https://placekitten.com/g/200/300",
     stock: 22,
+    category:5,
   },
   {
     id: 23,
@@ -182,6 +204,7 @@ export const Products = [
     price: 149.56,
     image: "https://placekitten.com/g/200/300",
     stock: 23,
+    category:5,
   },
   {
     id: 24,
@@ -190,6 +213,7 @@ export const Products = [
     price: 293.17,
     image: "https://placekitten.com/g/200/300",
     stock: 24,
+    category:5,
   },
   {
     id: 25,
@@ -198,6 +222,7 @@ export const Products = [
     price: 91.04,
     image: "https://placekitten.com/g/200/300",
     stock: 25,
+    category:5,
   },
 ];
 

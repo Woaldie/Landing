@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {Link} from 'react-router-dom'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -8,10 +9,10 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import CartWidget from '../CartWidget/CartWidget';
+import s from './NavBar.module.css'
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -39,7 +40,7 @@ export default function NavBar () {
     <AppBar position="static">
       <Container maxWidth="xl">
           
-        <Toolbar disableGutters>
+        <Toolbar>
             
           <CartWidget />
 
@@ -84,21 +85,21 @@ export default function NavBar () {
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
+            className={s.Logo}
           >
             LOGO
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
+          
+          <Box >
+            <ul className={s.ButtonsContainer}>
+              <li><Link to="/category/1" className={s.Buttons}>Category 1</Link></li>
+              <li><Link to="/category/2" className={s.Buttons}>Category 2</Link></li>
+              <li><Link to="/category/3" className={s.Buttons}>Category 3</Link></li>
+              <li><Link to="/category/4" className={s.Buttons}>Category 4</Link></li>
+              <li><Link to="/category/5" className={s.Buttons}>Category 5</Link></li>
+            </ul>
           </Box>
-
+          
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -129,6 +130,7 @@ export default function NavBar () {
             </Menu>
           </Box>
         </Toolbar>
+          
       </Container>
     </AppBar>
   );

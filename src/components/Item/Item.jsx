@@ -2,7 +2,7 @@ import * as React from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
+import {Link} from "react-router-dom";
 import Typography from "@mui/material/Typography";
 import s from "./Item.module.css";
 
@@ -25,7 +25,7 @@ export default function Item({ prod }) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" className={s.btn} >Ver detalle</Button>
+      <Link to={`/item/${prod.id}`} className = {s.btnDetail} >Ver detalle </Link>
       </CardActions>
     </Card>
   );
