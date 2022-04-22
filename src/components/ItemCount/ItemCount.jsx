@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Button } from "@mui/material";
 import s from "./ItemCount.module.css"
-
+  
 export default function ItemCount({stock}) {
   const [count, setCount] = useState(0);
-
+  
   function agregar() {
     if (count < stock) {
       setCount(count + 1);
