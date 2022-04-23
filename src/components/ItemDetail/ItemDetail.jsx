@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import { useCartContext } from "../Context/CartContext";
 import ItemCount from "../ItemCount/ItemCount";
 import s from './ItemDetail.module.css'
 
-export default function ItemDetail({image, name, price, id, description, stock, onAdd, cantidad, count }){
+export default function ItemDetail({image, name, price, id, description, stock}){
 
-  const [quantity, setQuantity] = useState (0);
+  const {addToCart} = useCartContext()
+  // const [quantity, setQuantity] = useState (0);
 
   function handleOnAdd (q) {
-    setQuantity(q)
+    addToCart({image, name, price, id, description, stock}, q)
   }
-  console.log(quantity);
+  // console.log(quantity);
     return (
       <>
         <div className={s.containerDetail} key={id}>
@@ -20,7 +21,7 @@ export default function ItemDetail({image, name, price, id, description, stock, 
             <p>{description}</p>
             <p>{stock}</p>
             <div >
-              <ItemCount stock={5} onAdd = {handleOnAdd} count={count}/>  
+              <ItemCount stock={5} onAdd = {handleOnAdd}/>  
             </div>
           </div>
         </div>
