@@ -2,23 +2,19 @@ import React, { useState } from "react";
 import { Button } from "@mui/material";
 import s from "./ItemCount.module.css"
   
-export default function ItemCount({stock}) {
+export default function ItemCount({stock, onAdd}) {
   const [count, setCount] = useState(0);
   
-  function agregar() {
+  function increment() {
     if (count < stock) {
       setCount(count + 1);
     }
   }
 
-  function quitar() {
+  function decrement() {
     if (count > 0) {
       setCount(count - 1);
     }
-  }
-
-  function comprar() {
-    alert("Agregaste " + count + " productos a tu carrito");
   }
 
   return (
@@ -27,18 +23,16 @@ export default function ItemCount({stock}) {
         <div className={s.contador}>
         <h2>{count}</h2>
         <Button
-          className="Agregar"
           variant="contained"
           color="success"
-          onClick={agregar}
+          onClick={increment}
         >
           +
         </Button>
         <Button
-          className="Quitar"
           variant="contained"
           color="error"
-          onClick={quitar}
+          onClick={decrement}
         >
           -
         </Button>
@@ -46,12 +40,11 @@ export default function ItemCount({stock}) {
 
         <div className={s.comprar}>
         <Button
-          className="Comprar"
           variant="contained"
           disableElevation
-          onClick={comprar}
+          onClick={() => onAdd (count)}
         >
-          Comprar
+          Add
         </Button>
         </div>
       </div>
