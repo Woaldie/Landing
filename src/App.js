@@ -12,7 +12,7 @@ function App() {
       
       <NavBar /> 
 
-      <CartProvider />
+      <CartProvider>
 
         <Routes>
 
@@ -22,7 +22,8 @@ function App() {
 
           <Route exact path='/item/:id' element = {<ItemDetailContainer />} />
         </Routes>
-     
+        
+     </CartProvider>
     </BrowserRouter>
   );
 }
