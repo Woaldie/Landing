@@ -4,7 +4,7 @@ import { PromiseProducts} from "../Products/Products";
 import { useParams } from 'react-router-dom'
 
 function ItemDetailContainer() {
-  const [product, setItem] = useState([]);
+  const [item, setItem] = useState([]);
   const {id} = useParams ();
 
   useEffect(() => {
@@ -16,7 +16,7 @@ function ItemDetailContainer() {
 
   return (
     <>
-      <ItemDetail {...product} />
+      <ItemDetail {...item} />
     </>
   );
 }

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Button } from "@mui/material";
 import s from "./ItemCount.module.css"
+import { useCartContext } from "../Context/CartContext";
   
-export default function ItemCount({stock, onAdd}) {
+export default function ItemCount({stock}) {
   const [count, setCount] = useState(0);
-  
+  const {addToCart} = useCartContext()
   function increment() {
     if (count < stock) {
       setCount(count + 1);
@@ -25,14 +26,14 @@ export default function ItemCount({stock, onAdd}) {
         <Button
           variant="contained"
           color="success"
-          onClick={increment}
+          onClick={increment} 
         >
           +
         </Button>
         <Button
           variant="contained"
           color="error"
-          onClick={decrement}
+          onClick={decrement} 
         >
           -
         </Button>
@@ -42,7 +43,7 @@ export default function ItemCount({stock, onAdd}) {
         <Button
           variant="contained"
           disableElevation
-          onClick={() => onAdd (count)}
+          onClick={() => addToCart (addToCart)}
         >
           Add
         </Button>
